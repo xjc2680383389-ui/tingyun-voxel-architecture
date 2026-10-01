@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#718e94" />
+    <meta name="description" content="听云苑，一座可旋转、缩放的中国古典体素院落。看重檐金瓦、朱柱斗拱与晨暮光影。" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%2328383b'/%3E%3Cpath d='M5 19h30l-4-4-3 1-8-7-8 7-3-1z' fill='%23e6b653'/%3E%3Cpath d='M10 21h20v12H10z' fill='%23b8513b'/%3E%3Cpath d='M18 24h4v9h-4z' fill='%2328383b'/%3E%3C/svg%3E" />
+    <title>听云苑 · 体素古建漫游</title>
+  </head>
+  <body>
+    <main id="app">
+      <div id="scene" role="img" aria-label="中国古典体素院落：听云殿居中，两侧配殿、前方山门及钟鼓楼对称分布。可拖动旋转、滚轮缩放。"></div>
+      <header class="masthead">
+        <div class="identity">
+          <span class="seal" aria-hidden="true">山<br />河</span>
+          <div><h1>听云苑</h1><p>体素古建漫游</p></div>
+        </div>
+        <div class="daylight"><span id="light-label">晨光</span><span class="sun-mark" aria-hidden="true">☀</span></div>
+      </header>
+      <aside class="scene-note"><span>一轴六殿</span><p>朱柱承檐，青瓦听风。</p></aside>
+      <footer class="dock">
+        <div class="view-controls" role="group" aria-label="观察视角">
+          <button id="overview" class="active" aria-pressed="true">全景</button>
+          <button id="axis" aria-pressed="false">中轴</button>
+          <button id="orbit" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 9a8 8 0 1 0 0 6M20 4v5h-5" /></svg>环游</button>
+        </div>
+        <span class="dock-divider" aria-hidden="true"></span>
+        <button id="lighting" aria-label="切换至暮色"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4a8.5 8.5 0 1 0 11.5 11.5Z" /></svg><span>暮色</span></button>
+        <button id="reset" class="icon-button" aria-label="复位视角" title="复位视角（R）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6" /></svg></button>
+      </footer>
+      <div class="help">拖动旋转<span>／</span>滚轮缩放<span>／</span>右键平移</div>
+      <div class="performance" aria-label="实时帧率"><span id="fps">—</span><span>帧 / 秒</span></div>
+      <div id="loading" role="status"><div class="loading-roof" aria-hidden="true"></div><p>正在营造院落…</p></div>
+      <div id="error" role="alert" hidden><h2>场景暂时无法显示</h2><p>请使用支持 WebGL 2 的浏览器，并开启硬件加速后重新打开。</p></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
